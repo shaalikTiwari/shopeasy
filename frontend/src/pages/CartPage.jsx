@@ -83,19 +83,19 @@ const CartPage = () => {
           <span className="text-xl font-bold text-orange-500">₹{cartTotal.toLocaleString("en-IN")}</span>
         </div>
 
-        <div className="flex gap-3 mt-6">
-          <button
-            onClick={clearCart}
-            className="flex-1 border border-gray-300 text-gray-600 py-2.5 rounded-xl font-medium hover:bg-gray-50 transition text-sm"
-          >
-            Clear Cart
-          </button>
-          <button
+        <div className="flex flex-col gap-3 mt-6">
+        <button
             onClick={() => user ? navigate("/checkout") : navigate("/login")}
-            className="flex-2 w-full bg-orange-500 hover:bg-orange-600 text-white py-2.5 rounded-xl font-semibold transition"
-          >
-            {user ? "Proceed to Checkout" : "Login to Checkout"}
-          </button>
+            className="w-full bg-orange-500 hover:bg-orange-600 text-white py-3 rounded-xl font-semibold transition text-base"
+        >
+            {user ? "Proceed to Checkout →" : "Login to Checkout"}
+        </button>
+        <button
+            onClick={clearCart}
+            className="w-full border border-gray-200 text-gray-400 py-2 rounded-xl font-medium hover:bg-gray-50 transition text-sm"
+        >
+            Clear Cart
+        </button>
         </div>
       </div>
     </div>
