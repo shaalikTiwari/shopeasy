@@ -47,7 +47,7 @@ const RegisterPage = () => {
               onChange={handleChange}
               required
               className="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-orange-400"
-              placeholder="Shaalik Tiwari"
+              placeholder="Your name"
             />
           </div>
           <div>
