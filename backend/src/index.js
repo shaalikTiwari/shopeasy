@@ -12,7 +12,7 @@ const app = express();
 
 // Security middleware
 app.use(helmet());
-app.use(mongoSanitize());
+//app.use(mongoSanitize({ allowDots: true, replaceWith: '_' }));
 app.use(cors({ origin: process.env.CLIENT_URL || "http://localhost:5173", credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
